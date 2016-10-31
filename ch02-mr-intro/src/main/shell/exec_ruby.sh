@@ -1,0 +1,1 @@
+nohup hadoop jar ${HADOOP_HOME}/share/hadoop/tools/lib/hadoop-streaming-2.7.3.jar -input ncdc_data -output output_ruby -mapper ch02-mr-intro/src/main/ruby/max_temperature_map.rb -reducer ch02-mr-intro/src/main/ruby/max_temperature_reduce.rb 2>&1 > results_ruby.log &
